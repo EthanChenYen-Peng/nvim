@@ -24,6 +24,11 @@ endif
 hi EndOfBuffer ctermfg=bg
 hi LineNrAbove ctermfg=blue
 hi LineNrBelow ctermfg=blue
+augroup custom_highlight
+  autocmd!
+  au ColorScheme * hi EndOfBuffer ctermfg=bg
+  au ColorScheme * hi LineNr ctermfg=red
+augroup END
 " hi vimineComment ctermfg=244
 " hi vimComment ctermfg=244
 """"""""""

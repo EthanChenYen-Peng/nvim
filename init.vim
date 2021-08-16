@@ -65,7 +65,6 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  "Zooming pane'
 nnoremap <leader>= :wincmd =<cr>                "Rebalance
 let g:hardtime_default_on = 1
-let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
 
 call plug#begin('~/.vim/plugged')
     " Essentials
@@ -78,10 +77,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/opt/homebrew/bin/fzf' }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    Plug 'preservim/nerdtree'
-    Plug 'ryanoasis/vim-devicons'
     Plug 'git@github.com:takac/vim-hardtime.git'
-
+    Plug 'kyazdani42/nvim-web-devicons' " for file icons
+    Plug 'kyazdani42/nvim-tree.lua'
     " Dev tools
 	Plug 'vim-test/vim-test'
     Plug 'SirVer/ultisnips'
