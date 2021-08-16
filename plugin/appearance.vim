@@ -1,0 +1,58 @@
+""""""""""
+" Colorscheme
+""""""""""
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+let g:neodark#use_256color = 1
+let g:neodark#solid_vertsplit = 1
+colorscheme neodark
+
+set t_Co=256
+
+" Color issue with tmux  https://www.reddit.com/r/vim/comments/75zvux/why_is_vim_background_different_inside_tmux/
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+if !has('nvim')
+    set term=xterm-256color
+endif
+
+" Don't want to see filter line ~
+hi EndOfBuffer ctermfg=bg
+hi LineNrAbove ctermfg=blue
+hi LineNrBelow ctermfg=blue
+" hi vimineComment ctermfg=244
+" hi vimComment ctermfg=244
+""""""""""
+" Screen display
+""""""""""
+" Split direction
+set splitbelow
+set splitright
+set showtabline=2   " Always show tabline.
+
+""""""""""
+" Tabs and spaces
+""""""""""
+set autoindent 	    " respect indentation when starting a new line.
+" Tabstop determines how many columns a tab counts for.
+set tabstop=4       " Number of spaces tab is counted for.
+" Shiftwidth determines how many columns text is indented when using reindent operations.
+set shiftwidth=4    " Number of spaces use for autoindent.
+set expandtab	    " Expand tabs into spaces.
+
+" Make backspace work like most other programs
+set backspace=2     " Fix backspace behavior on most terminals.
+
+" View highlight group
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
