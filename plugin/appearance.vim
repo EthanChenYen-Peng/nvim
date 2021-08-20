@@ -21,16 +21,9 @@ if !has('nvim')
 endif
 
 " Don't want to see filter line ~
-hi EndOfBuffer ctermfg=bg
-hi LineNrAbove ctermfg=blue
-hi LineNrBelow ctermfg=blue
-augroup custom_highlight
-  autocmd!
-  au ColorScheme * hi EndOfBuffer ctermfg=bg
-  au ColorScheme * hi LineNr ctermfg=red
-augroup END
-" hi vimineComment ctermfg=244
-" hi vimComment ctermfg=244
+hi EndOfBuffer guifg=bg
+hi LineNr guifg=lightblue
+
 """"""""""
 " Screen display
 """"""""""
