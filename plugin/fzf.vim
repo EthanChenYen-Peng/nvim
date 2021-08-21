@@ -1,5 +1,5 @@
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
+nnoremap <leader>gg :Rg<CR>
 
 let g:fzf_layout = { 'down':  '40%'}

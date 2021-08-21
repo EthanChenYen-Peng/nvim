@@ -14,6 +14,7 @@ set showcmd                " Show command
 " set spell                  " Spell checking
 set complete+=kspell       " Insert completion from spelling dictionary if 'spell' is enable
 set cursorline             " Cursorline hightlight
+set hidden                 " Allo hidden buffers
 
 syntax on
 filetype plugin on
@@ -50,9 +51,6 @@ noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
 nnoremap <SPACE> <Nop>
 let mapleader=' '
-
-" Switch between the last two files
-nnoremap <leader><leader> <C-^>
 
 "Remove all trailing whitespace when save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -114,7 +112,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
 
     " Tmux integration
-	Plug 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
