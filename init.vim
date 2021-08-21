@@ -100,7 +100,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim'
 
     " Ruby on rails
-    "1. The vim-ruby bundle provides motions and text objects for operating on classes, modules, and method definitions.
+    "1. The vim-ruby bundleprovides motions and text objects for operating on classes, modules, and method definitions.
     "2. Setting vim's path to include all directories listed in Ruby's
     "$LOADPATH
     Plug 'vim-ruby/vim-ruby'
@@ -112,6 +112,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-rake'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-rails'
+
+    " Javascript
+    Plug 'mxw/vim-jsx'
 
     " Themes
     Plug 'KeitaNakamura/neodark.vim'
