@@ -66,6 +66,14 @@ nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  "Zooming pane'
 nnoremap <leader>= :wincmd =<cr>                "Rebalance
 let g:hardtime_default_on = 1 " Allow hardtime
 
+" Opps command
+command WQ wq
+command Wq wq
+command Q q
+command W w
+command Vsplit vsplit
+command VSplit vsplit
+command Split split
 
 call plug#begin('~/.vim/plugged')
     " Essentials
@@ -119,3 +127,4 @@ call plug#end()
 luafile ~/.config/nvim/plugin/compe-config.lua
 luafile ~/.config/nvim/lsp/python-ls.lua
 luafile ~/.config/nvim/lsp/javascript-ls.lua
+luafile ~/.config/nvim/lsp/ruby-ls.lua
