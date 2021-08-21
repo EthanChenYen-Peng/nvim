@@ -95,11 +95,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
+    Plug 'mattn/emmet-vim'
+    " Plug 'neovim/nvim-lspconfig'
+    " Plug 'hrsh7th/nvim-compe'
+    Plug 'neoclide/coc.nvim'
 
     " Ruby on rails
-    "1. The vim-ruby bundle provides motions and text objects for operating on classes, modules, and method definitions.
+    "1. The vim-ruby bundleprovides motions and text objects for operating on classes, modules, and method definitions.
     "2. Setting vim's path to include all directories listed in Ruby's
     "$LOADPATH
     Plug 'vim-ruby/vim-ruby'
@@ -111,6 +113,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-rake'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-rails'
+
+    " Javascript
+    Plug 'mxw/vim-jsx'
 
     " Themes
     Plug 'KeitaNakamura/neodark.vim'
@@ -124,7 +129,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
-luafile ~/.config/nvim/plugin/compe-config.lua
-luafile ~/.config/nvim/lsp/python-ls.lua
-luafile ~/.config/nvim/lsp/javascript-ls.lua
-luafile ~/.config/nvim/lsp/ruby-ls.lua
+" luafile ~/.config/nvim/plugin/compe-config.lua
+" luafile ~/.config/nvim/lsp/python-ls.lua
+" luafile ~/.config/nvim/lsp/javascript-ls.lua
+" luafile ~/.config/nvim/lsp/ruby-ls.lua
