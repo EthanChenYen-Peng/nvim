@@ -66,6 +66,7 @@ nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  "Zooming pane'
 nnoremap <leader>= :wincmd =<cr>                "Rebalance
 let g:hardtime_default_on = 1
 
+
 call plug#begin('~/.vim/plugged')
     " Essentials
     Plug 'tpope/vim-surround'
@@ -80,13 +81,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'git@github.com:takac/vim-hardtime.git'
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'kyazdani42/nvim-tree.lua'
+
     " Dev tools
 	Plug 'vim-test/vim-test'
     Plug 'SirVer/ultisnips'
     " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
-    " Asynchronous Lint Engine
-    Plug 'dense-analysis/ale'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
 
     " Ruby on rails
     Plug 'vim-ruby/vim-ruby'
@@ -107,3 +109,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'christoomey/vim-tmux-navigator'
     Plug 'edkolev/tmuxline.vim'
 call plug#end()
+
+luafile ~/.config/nvim/plugin/compe-config.lua
+luafile ~/.config/nvim/lsp/python-ls.lua
+luafile ~/.config/nvim/lsp/javascript-ls.lua
