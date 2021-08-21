@@ -44,13 +44,15 @@ set wildmode=list:longest,full  " Complete till longest string, then open menu.
 " Key mapping
 """"""""""""""
 " Navigate windows with <Ctrl-hjkl> instead of <Ctrl-w> followed by hjkl.
-" asd
 noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
 nnoremap <SPACE> <Nop>
 let mapleader=' '
+
+" Switch between the last two files
+nnoremap <leader><leader> <C-^>
 
 "Remove all trailing whitespace when save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -64,7 +66,7 @@ autocmd VimResized * :wincmd =
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  "Zooming pane'
 nnoremap <leader>= :wincmd =<cr>                "Rebalance
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 1 " Allow hardtime
 
 
 call plug#begin('~/.vim/plugged')
@@ -91,11 +93,17 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/nvim-compe'
 
     " Ruby on rails
+    "1. The vim-ruby bundle provides motions and text objects for operating on classes, modules, and method definitions.
+    "2. Setting vim's path to include all directories listed in Ruby's
+    "$LOADPATH
     Plug 'vim-ruby/vim-ruby'
+    " Automatically configures the path and tags settings to include all
+    " libraries included in your Gemfile
     Plug 'tpope/vim-bundler'
+    " automatically configures the path setting to include `lib` and `ext`
+    " directories.
     Plug 'tpope/vim-rake'
     Plug 'tpope/vim-unimpaired'
-    Plug 'tpope/rbenv-ctags'
     Plug 'tpope/vim-rails'
 
     " Themes

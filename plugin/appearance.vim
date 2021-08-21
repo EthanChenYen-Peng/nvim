@@ -20,6 +20,7 @@ if !has('nvim')
     set term=xterm-256color
 endif
 
+set list listchars=tab:»·,trail:·,nbsp:·
 " Don't want to see filter line ~
 hi EndOfBuffer guifg=bg
 hi LineNr guifg=lightblue
