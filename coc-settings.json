@@ -1,4 +1,10 @@
 {
-    "emmet.includeLanguages": {"eruby":"html"}
+    "emmet.includeLanguages": {"eruby":"html"},
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "javascript",
+        "javascriptreact"
+    ]
 }
 
